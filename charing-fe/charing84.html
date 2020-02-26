@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>charing cross road 84</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/core.css">
+
+    <script>
+        var size = function(){
+            //居中！
+            document.getElementById("background-img").style.left = (document.documentElement.clientWidth - document.getElementById("background-img").clientWidth)/2 + "px";
+        }
+        window.onresize = size;
+        window.onload = size;
+    </script>
+
+</head>
+<body>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-button" type="button" class="btn btn-primary" data-dismiss="modal">我知道了</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="background">
+    <h1 class="step-first">在这里开启爱书人的奇妙之旅</h1>
+    <h2 class="step-first">Open the book lover's marvellous trip.</h2>
+    <form action="#" method="post">
+
+        <div class="form-group has-feedback">
+            <textarea class="form-control" rows="10" placeholder="输入邮件正文" name="first_mail_content" id="first_mail_content"></textarea>
+            <span style="display: none" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <!--
+        <div class="form-group">
+            <input class="btn btn-primary" type="button" value="下一步" onclick="next()">
+        </div>
+        -->
+
+        <div class="form-group has-feedback">
+            <input type="email" class="form-control" placeholder="请留下您的邮箱" name="email" id="email">
+            <span style="display: none" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <select class="form-control" name="sex" id="sex">
+                <option>请选择您的性别</option>
+                <option>男</option>
+                <option>女</option>
+            </select>
+            <span style="margin-right: 10px;display: none" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group" id="button-wrapper">
+            <button id="send-button" type="button"><!--type="submit" class="btn btn-primary"-->
+                <p>发送</p>
+                <div class="fill"></div>
+                <div class="fa"></div>
+            </button>
+        </div>
+
+    </form>
+
+    <img src="pic/background.jpg" alt="" class="background" id="background-img">
+    <script>
+        size();//避免页面加载时抖动
+    </script>
+</div>
+
+<div class="nav">
+    <!--<button id="feedback-button" class="nav-button">用户反馈</button>-->
+    <button id="help-button" class="nav-button">帮助</button>
+    <textarea class="form-control" id="feedbackinput" name="user feedback" style="visibility:hidden"></textarea>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/jquery_functions.js"></script>
+</body>
+</html>

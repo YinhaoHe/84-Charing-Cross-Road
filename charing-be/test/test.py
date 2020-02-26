@@ -1,0 +1,1 @@
+print "SELECT pair_email FROM users where email = %s" , '236294386@qq.com'

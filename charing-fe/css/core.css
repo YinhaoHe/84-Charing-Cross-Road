@@ -1,0 +1,201 @@
+div.nav{
+    position: absolute;
+    left: 10px;
+    top: 2px;
+}
+
+.nav-button{
+    width: 80px;
+    font-size: 17px;
+    margin: 5px;
+    color: white;
+    background-color: transparent;
+}
+
+.background > form{
+    position: absolute;
+    width: 82%;
+    text-align: right;
+    top: 10%;
+    right: 9%;
+
+    margin-left:auto;
+    margin-right:auto;
+    height: 410px;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+
+/*表单移动端适配*/
+@media(min-width: 768px){
+    .background > form{
+        width: 400px;
+    }
+}
+
+/*解决小键盘弹出时,布局被顶到上面去的问题*/
+@media(min-height: 500px){
+    .background > form{
+        top: auto;
+        bottom: 11%;
+    }
+}
+
+.background > h1{
+    margin-top: 50px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+.background > h2{
+    color: white;
+    font-size: 25px;
+    margin-top: -12px;
+    text-align: center;
+}
+img.background{
+    height: 100%;
+    min-height: 500px;
+    position: fixed;
+    top:0;/*必须加这行,不然不脱离文档流*/
+    z-index: -1;
+}
+
+/*提交按钮动画*/
+
+
+button {
+    margin-top: -4px;
+    width: 100%;
+    background: #337AB7;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    position: relative;
+}
+
+button p {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    max-height: 30px;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+button .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    background: #337AB7;
+    border-radius: 10px;
+}
+
+button .fa {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 40px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+#button-wrapper{
+    text-align: center;
+}
+#button-wrapper.clicked {
+    padding: 0;
+}
+
+#button-wrapper.clicked button {
+    background: #ccc;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+#button-wrapper.clicked button p {
+    max-height: 0;
+    overflow: hidden
+}
+
+#button-wrapper.clicked button .fill {
+    width: 30%;
+    -webkit-transition: 4s all linear .6s;
+    transition: 4s all linear .6s;
+    border-radius: 50px;
+}
+
+
+#button-wrapper.success button .fill {
+    width: 100%;
+    -webkit-transition: .6s all ease 0s;
+    transition: .6s all ease 0s;
+    background: #50B850;
+}
+
+#button-wrapper.success button {
+    margin-top: -4px;
+    padding: 20px;
+    width: 40px;
+    -webkit-transition: .3s all ease .6s;
+    transition: .3s all ease .6s;
+}
+
+#button-wrapper.success button .fa {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s all ease .8s;
+    transition: .3s all ease .8s;
+}
+
+
+
+#button-wrapper.fail button .fill {
+    width: 100%;
+    -webkit-transition: .6s all ease 0s;
+    transition: .6s all ease 0s;
+    background: #D9534F;
+}
+
+#button-wrapper.fail button {
+    margin-top: -4px;
+    padding: 20px;
+    width: 40px;
+    -webkit-transition: .3s all ease .6s;
+    transition: .3s all ease .6s;
+}
+
+#button-wrapper.fail button .fa {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s all ease .8s;
+    transition: .3s all ease .8s;
+}
